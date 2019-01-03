@@ -116,12 +116,12 @@ for(i in 1:nrow(mydata)){
     html_nodes('.job-description')%>%
     html_text(trim =TRUE)
   x.b <- try(fun02(i), silent=TRUE)
-  if ('try-error' %in% class(x.c)) next
+  if ('try-error' %in% class(x.b)) next
   else size[i,1] <- page %>%      
     html_nodes(".new-compintro li:nth-child(2)") %>%
     html_text() 
   x.c <- try(fun03(i), silent=TRUE)
-   if ('try-error' %in% class(x.b))
+   if ('try-error' %in% class(x.c))
     industry[i,1] <- page %>%      
     html_nodes(".new-compintro li:nth-child(1)") %>%
     html_text()
