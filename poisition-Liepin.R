@@ -14,7 +14,7 @@ dir.create("data") #创建一个文件data
 # 首先，构建仅爬取一页的Function:
 crawl_one_page <- function(key="data analyst", i = 1) {
   # key 为爬取岗位关键词， i 为页码
-  base_url <- https://www.liepin.com/zhaopin/?&&fromSearchBtn=2
+  base_url <- 'https://www.liepin.com/zhaopin/?&&fromSearchBtn=2'
 #限定职位类型的一些参数：&jobKind=1，&compKind=010等
   key <- iconv(key, to = "UTF-8") # 保证关键词文本为UTF-8编码
   # 构建URL并加码。注意：curPage是从0开始的。
